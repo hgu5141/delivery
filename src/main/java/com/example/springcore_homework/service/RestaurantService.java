@@ -23,7 +23,7 @@ public class RestaurantService {
         }
 
         if(requestDto.getMinOrderPrice()%100 != 0){
-            throw new IllegalArgumentException("100원 단위로 입력 가능합니다.");
+            throw new IllegalArgumentException("100원 단위로 입력 가능합니,다.");
         }
 
         if(0 > requestDto.getDeliveryFee() || requestDto.getDeliveryFee() > 10_000){
