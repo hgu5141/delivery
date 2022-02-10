@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 public class Restaurant {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
@@ -35,6 +35,7 @@ public class Restaurant {
         this.minOrderPrice = minOrderPrice;
         this.deliveryFee = deliveryFee;
     }
+
 
 
 }

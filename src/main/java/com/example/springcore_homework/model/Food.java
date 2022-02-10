@@ -11,7 +11,7 @@ import javax.persistence.*;
 @Entity
 @NoArgsConstructor
 public class Food {
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
@@ -24,16 +24,6 @@ public class Food {
     @ManyToOne
     @JoinColumn(name = "Restaurant_Id", nullable = false)
     private Restaurant restaurant;
-
-
-
-//    @Builder
-//    public Food(Long id, String name, int price, Restaurant restaurant) {
-//        this.id = id;
-//        this.name = name;
-//        this.price = price;
-//        this.restaurant = restaurant;
-//    }
 
 
     @Builder

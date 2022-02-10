@@ -20,7 +20,7 @@ public class FoodService {
     private final FoodRepository foodRepository;
 
     @Transactional
-    public Food addFood(List<FoodRequestDto> requestDtoList, Long restaurantId){
+    public void addFood(List<FoodRequestDto> requestDtoList, Long restaurantId){
         Restaurant restaurant = restaurantRepository.findById(restaurantId).orElse(null);
 
 
@@ -41,8 +41,6 @@ public class FoodService {
             foodRepository.save(food);
 
         }
-        return null;
-
     }
 
     @Transactional

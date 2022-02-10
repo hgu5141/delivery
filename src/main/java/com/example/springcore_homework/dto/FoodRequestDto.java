@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class FoodsRequestDto {
+public class FoodRequestDto {
     private String name;
     private int price;
 }
